@@ -12,12 +12,12 @@
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
       <div class="modal-header">
-        <button (click)="pushName()" type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
       </div>
       <div class="modal-body">
         <h5>Enter your name: </h5>
         <input [(ngModel)]="name"/>
-        <!--<button (click)="pushName()">Add</button>-->
+        <button (click)="pushName()">Add</button>
       </div>
 
     </div>
