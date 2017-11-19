@@ -1,4 +1,6 @@
-# Ngauth0
+# Simple To-do list using Angular 4
+
+This is a simple angular4 to-do list which lets you add and delete items.
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.28.3.
 
