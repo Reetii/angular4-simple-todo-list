@@ -14,7 +14,8 @@ export class AppComponent {
       this.name='';
     }
   }
-  gotoLink=function(){
-    window.open('https://angular.io/docs');
+  removeName = function(index){
+    this.names.splice(index, 1);
+
   }
 }

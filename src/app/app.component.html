@@ -1,36 +1,31 @@
+
 <div class="container">
-
-
-  <div class="row text-center">
-      <a href="#" class="btn btn-lg btn-danger" data-toggle="modal" data-target="#smallModal">Click to open Modal</a>
-  </div>
-
-
-
-
-<div class="modal fade" id="smallModal" tabindex="-1" role="dialog" aria-labelledby="smallModal" aria-hidden="true">
-  <div class="modal-dialog modal-sm">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-      </div>
-      <div class="modal-body">
-        <h5>Enter your name: </h5>
-        <input [(ngModel)]="name"/>
-        <button (click)="pushName()">Add</button>
-      </div>
-
+  <button type="button" class="btn btn-primary btn-lg btn-block">TODO LIST</button>
+  <br/>
+  <div class="row">
+  <div class="col-10">
+    <div class="form-group">
+    <input [(ngModel)]="name" type="text" class="form-control" id="inputDefault">
     </div>
-  </div>
+</div>
+<div class="col-2">
+  <button (click)="pushName()" type="button" class="btn btn-primary">ADD</button>
 </div>
 </div>
-<div class="text-center">
-  <ul class="list-unstyled">
-    <li *ngFor="let n of names">
-      <h5>{{n}}</h5>
-    </li>
-  </ul>
-</div>
+<br/><br/>
 
-  <div class="text-center"><h3><a (click)="gotoLink()">Angular Documentation</a></h3></div>
-  <!--<a target="_blank" routerLink="/profile">Profile</a>-->
+<div class="text-center">
+<ul class="list-group list-unstyled">
+  <li *ngFor="let n of names; let ind = index" class="list-group-item">
+    <div class="row">
+      <div class="col-10">
+    <p class="text-left lead">{{n}}</p>
+  </div>
+  <div class="col-2">
+    <button (click)="removeName(ind)" type="button" class="btn btn-primary btn-sm">Delete</button>
+  </div>
+  </div>
+
+  </li>
+</ul>
+</div>
